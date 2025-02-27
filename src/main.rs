@@ -103,7 +103,7 @@ fn get_first_word(sentence:  String) -> String{
         if char == ' '{
             break;
         }
-        // if no spaces, we are converting char to string & back & push it to the variable {ans}. -> My understanding.
+        // if no spaces, we are converting char to string & back & push it to the variable {ans}. -> My understanding.``
         // Converts the char to a String and appends it to the variable `ans`. -> GPT Says
         ans.push_str(char.to_string().as_str());
     }
