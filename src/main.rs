@@ -44,12 +44,12 @@ fn main() {
     //     println!("There is some issue")
     // }
 
-    // Strings
+    // Strings, Patter Matching, Unwrap, Option<char>
 
-    let greeting = String::from("Hello Sir");
-    println!("{}", greeting);
+    // let greeting = String::from("Hello Sir");
+    // println!("{}", greeting);
 
-    let char1 = greeting.chars().nth(100);
+    // let char1 = greeting.chars().nth(100);
 
     // Gives Build error
     // println!("{}", char1);
@@ -58,9 +58,30 @@ fn main() {
     // println!("char1: {}", char1.unwrap())
 
     // Checks & gives either ans or simply print a normal statement. No errors posted.
-    match  char1 {
-        Some(c) => println!("{}", c),
-        None => println!("No character at that index "),
+    // match  char1 {
+    //     Some(c) => println!("{}", c),
+    // None => println!("No character at that index "),
+    // }
+
+    // Conditionals
+    
+    let is_even = false;
+
+    if is_even {
+        println!("The number is even")
+    } else {
+        println!("The number is odd")
     }
 
+    // Loops
+
+    // Note -  With just print you will get a %, it means the program has ended and returned the control to the shell.
+    
+    for i in 0..10{
+        // print!("{}\n", i)
+        // print!("{}", i) -> gives %
+        println!("{}", i)
+    }
+
+    
 }
