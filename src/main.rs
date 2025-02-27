@@ -83,30 +83,40 @@ fn main() {
     //     println!("{}", i)
     // }
 
-    let sentence = String::from("hello world, i hope everyone is doing well.");
-    let first_word = get_first_word(sentence);
-    if first_word == ""{
-        println!("There are initial spaces")
-    } else {
-        println!("This is the first word of the sentence: {}", first_word)
-    }
+    // let sentence = String::from("hello world, i hope everyone is doing well.");
+    // let first_word = get_first_word(sentence);
+    // if first_word == ""{
+    //     println!("There are initial spaces")
+    // } else {
+    //     println!("This is the first word of the sentence: {}", first_word)
+    // }
+
+    let result = do_sum(3, 4);
+    println!("Total Result is: {}", result);
 }
 
 
+// Functions 
+fn do_sum(a: i32, b: i32) -> i32 {
+	return a + b;
+}
+
+
+// Function - To search the first word in the sentence
 // creating function which takes sentence as input of type String & also returns a String
-fn get_first_word(sentence:  String) -> String{
-    // having a variable ans which is mutable used to store the characets after looping
-    let mut ans = String::from("");
-    // simple for loop on the input take (sentence)
-    for char in sentence.chars(){
-        // checking if there are initial spaces, if yes, we break
-        if char == ' '{
-            break;
-        }
-        // if no spaces, we are converting char to string & back & push it to the variable {ans}. -> My understanding.``
-        // Converts the char to a String and appends it to the variable `ans`. -> GPT Says
-        ans.push_str(char.to_string().as_str());
-    }
-    // returning the ans whatever output we get.
-    return  ans;
-}
+// fn get_first_word(sentence:  String) -> String{
+//     // having a variable ans which is mutable used to store the characets after looping
+//     let mut ans = String::from("");
+//     // simple for loop on the input take (sentence)
+//     for char in sentence.chars(){
+//         // checking if there are initial spaces, if yes, we break
+//         if char == ' '{
+//             break;
+//         }
+//         // if no spaces, we are converting char to string & back & push it to the variable {ans}. -> My understanding.``
+//         // Converts the char to a String and appends it to the variable `ans`. -> GPT Says
+//         ans.push_str(char.to_string().as_str());
+//     }
+//     // returning the ans whatever output we get.
+//     return  ans;
+// }
