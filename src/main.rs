@@ -65,23 +65,48 @@ fn main() {
 
     // Conditionals
     
-    let is_even = false;
+    // let is_even = false;
 
-    if is_even {
-        println!("The number is even")
-    } else {
-        println!("The number is odd")
-    }
+    // if is_even {
+    //     println!("The number is even")
+    // } else {
+    //     println!("The number is odd")
+    // }
 
     // Loops
 
     // Note -  With just print you will get a %, it means the program has ended and returned the control to the shell.
     
-    for i in 0..10{
-        // print!("{}\n", i)
-        // print!("{}", i) -> gives %
-        println!("{}", i)
-    }
+    // for i in 0..10{
+    //     // print!("{}\n", i)
+    //     // print!("{}", i) -> gives %
+    //     println!("{}", i)
+    // }
 
-    
+    let sentence = String::from("hello world, i hope everyone is doing well.");
+    let first_word = get_first_word(sentence);
+    if first_word == ""{
+        println!("There are initial spaces")
+    } else {
+        println!("This is the first word of the sentence: {}", first_word)
+    }
+}
+
+
+// creating function which takes sentence as input of type String & also returns a String
+fn get_first_word(sentence:  String) -> String{
+    // having a variable ans which is mutable used to store the characets after looping
+    let mut ans = String::from("");
+    // simple for loop on the input take (sentence)
+    for char in sentence.chars(){
+        // checking if there are initial spaces, if yes, we break
+        if char == ' '{
+            break;
+        }
+        // if no spaces, we are converting char to string & back & push it to the variable {ans}. -> My understanding.
+        // Converts the char to a String and appends it to the variable `ans`. -> GPT Says
+        ans.push_str(char.to_string().as_str());
+    }
+    // returning the ans whatever output we get.
+    return  ans;
 }
