@@ -29,18 +29,38 @@ fn main() {
 
     // Booleans
 
-    let male = true;
-    let age_18  = true;
+    // let male = true;
+    // let age_18  = true;
 
-    if male {
-        println!("He is a male")
-    }else{
-        println!("Age is 18 ")
+    // if male {
+    //     println!("He is a male")
+    // }else{
+    //     println!("You are not a male ")
+    // }
+
+    // if male && age_18 {
+    //     println!("He is a male having an age of 18")
+    // }else {
+    //     println!("There is some issue")
+    // }
+
+    // Strings
+
+    let greeting = String::from("Hello Sir");
+    println!("{}", greeting);
+
+    let char1 = greeting.chars().nth(100);
+
+    // Gives Build error
+    // println!("{}", char1);
+
+    // Gives runtime error if not exist
+    // println!("char1: {}", char1.unwrap())
+
+    // Checks & gives either ans or simply print a normal statement. No errors posted.
+    match  char1 {
+        Some(c) => println!("{}", c),
+        None => println!("No character at that index "),
     }
 
-    if male && age_18 {
-        println!("He is a male having an age of 19")
-    }else {
-        println!("There is some issue")
-    }
 }
