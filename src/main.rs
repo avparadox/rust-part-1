@@ -1,6 +1,8 @@
 fn main() {
     println!("Hello, Aditya!");
 
+    // Signed & Unsigned Ints
+
     // let x: i8 = -4;
     // let x1 = -4;
     // let y: u8 = 101;
@@ -17,15 +19,28 @@ fn main() {
 
     // Muts & Loops
 
-    let mut x: i8= 0;
+    // let mut x: i32 = 0;
     
-    for _i in 0..1000 {
-       x =  x +  100;
+    // for _i in 0..100000 {
+    //    x =  x +  10000;
+    // }
+
+    // println!("x: {}", x)
+
+    // Booleans
+
+    let male = true;
+    let age_18  = true;
+
+    if male {
+        println!("He is a male")
+    }else{
+        println!("Age is 18 ")
     }
 
-    println!("x: {}", x)
-
-
-
-
+    if male && age_18 {
+        println!("He is a male having an age of 19")
+    }else {
+        println!("There is some issue")
+    }
 }
