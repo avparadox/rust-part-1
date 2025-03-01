@@ -91,15 +91,29 @@ fn main() {
     //     println!("This is the first word of the sentence: {}", first_word)
     // }
 
-    let result = do_sum(3, 4);
-    println!("Total Result is: {}", result);
+    // let result = do_sum(3, 4);
+    // println!("Total Result is: {}", result);
+
+    // Pattern Matching Prac
+
+    let x: i8 = 44;
+    
+    match x {
+        1 => println!("Value is 1"),
+        2 => println!("It is 2"),
+        _ => println!("Something is fishy"),    
+        // Default case is important as it helps in covering all the edge cases for the pattern matching. Basically you need to return something or else it gives an error. so _ is important.      
+    }
+
+
+
 }
 
 
 // Functions 
-fn do_sum(a: i32, b: i32) -> i32 {
-	return a + b;
-}
+// fn do_sum(a: i32, b: i32) -> i32 {
+// 	return a + b;
+// }
 
 
 // Function - To search the first word in the sentence
