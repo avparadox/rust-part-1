@@ -123,16 +123,17 @@ fn main() {
     // println!("{} from mystring3", mystring3);
 
     let real = String::from("Hello");
+    take_ownership(&real);
     println!("{} from real", real);
     let s = &real;
     println!("{} from s", s);
 
 }
 
-// fn take_ownership(mystring: String)-> String{
-//     println!("{} from mystring", mystring);
-//     return mystring;
-// }
+fn take_ownership(mystring: &String)-> &String{
+    println!("{} from &String", mystring);
+    return mystring;
+}
 
 // fn stack_fn() {
 //     // Declare a few integers on the stack
