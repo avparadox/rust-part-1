@@ -1,5 +1,26 @@
+// Structs
+
+struct User {
+    name: String,
+    age: u32,
+    email: String,
+    active: bool
+}
+
 fn main() {
-    println!("Hello, Aditya!");
+    // println!("Hello, Aditya!");
+
+    let user = User {
+        name: String::from("Aditya"),
+        age: 22,
+        email: String::from("aditya@av.com"),
+        active: true
+    };
+
+    println!("Name: {}", user.name);
+    println!("Email: {}", user.email);
+    println!("Age: {}", user.age);
+    println!("Active Status: {}", user.active);
 
     // Signed & Unsigned Ints
 
@@ -141,12 +162,12 @@ fn main() {
     // println!("{}", s1)
 
     // learn example
-    let mut s1 = String::from("Hello");
-    let s2 = &mut s1;
-    s2.push_str(" World");
-    // Gives error below to save memory issues
-    // println!("{}", s1);
-    println!("{}", s2);
+    // let mut s1 = String::from("Hello");
+    // let s2 = &mut s1;
+    // s2.push_str(" World");
+    // // Gives error below to save memory issues
+    // // println!("{}", s1);
+    // println!("{}", s2);
 
 
 }
