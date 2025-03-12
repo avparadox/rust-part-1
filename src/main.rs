@@ -123,14 +123,14 @@ fn main() {
     // println!("{} from mystring3", mystring3);
 
     let real = String::from("Hello");
-    take_ownership(&real);
+    borrow_variable(&real);
     println!("{} from real", real);
     let s = &real;
     println!("{} from s", s);
 
 }
 
-fn take_ownership(mystring: &String)-> &String{
+fn borrow_variable(mystring: &String)-> &String{
     println!("{} from &String", mystring);
     return mystring;
 }
