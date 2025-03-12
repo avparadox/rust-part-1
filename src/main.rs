@@ -122,16 +122,23 @@ fn main() {
     // // This below line may give an error as heap value of real string has been passed to mystring.
     // println!("{} from mystring3", mystring3);
 
+    //simple string init in main's stack frame -> no mut needed
     let real = String::from("Hello");
+    // fn calling & transferring address of the heap -> temp purpose 
     borrow_variable(&real);
+    // above one is compiled so now we got our heap value back -> print it
     println!("{} from real", real);
+    // same as above -> both
     let s = &real;
     println!("{} from s", s);
 
 }
 
-fn borrow_variable(mystring: &String)-> &String{
+// accept string & send string back to main stack frame
+fn borrow_variable(mystring: &String) -> &String{
+    // simple print
     println!("{} from &String", mystring);
+    // crashing the pointer
     return mystring;
 }
 
