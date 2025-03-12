@@ -123,24 +123,37 @@ fn main() {
     // println!("{} from mystring3", mystring3);
 
     //simple string init in main's stack frame -> no mut needed
-    let real = String::from("Hello");
-    // fn calling & transferring address of the heap -> temp purpose 
-    borrow_variable(&real);
-    // above one is compiled so now we got our heap value back -> print it
-    println!("{} from real", real);
-    // same as above -> both
-    let s = &real;
-    println!("{} from s", s);
+    // let real = String::from("Hello");
+    // // fn calling & transferring address of the heap -> temp purpose 
+    // borrow_variable(&real);
+    // // above one is compiled so now we got our heap value back -> print it
+    // println!("{} from real", real);
+    // // same as above -> both
+    // let s = &real;
+    // println!("{} from s", s);
 
+    // References
+
+    // Mutable Reference
+    let mut s1 = String::from("Hello");
+    // Passing a mutable reference
+    update_word(&mut s1);
+    println!("{}", s1)
+
+
+}
+
+fn update_word(s: &mut String){
+    s.push_str(" World");
 }
 
 // accept string & send string back to main stack frame
-fn borrow_variable(mystring: &String) -> &String{
-    // simple print
-    println!("{} from &String", mystring);
-    // crashing the pointer
-    return mystring;
-}
+// fn borrow_variable(mystring: &String) -> &String{
+//     // simple print
+//     println!("{} from &String", mystring);
+//     // crashing the pointer
+//     return mystring;
+// }
 
 // fn stack_fn() {
 //     // Declare a few integers on the stack
