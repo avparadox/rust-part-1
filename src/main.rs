@@ -135,17 +135,25 @@ fn main() {
     // References
 
     // Mutable Reference
+    // let mut s1 = String::from("Hello");
+    // // Passing a mutable reference
+    // update_word(&mut s1);
+    // println!("{}", s1)
+
+    // learn example
     let mut s1 = String::from("Hello");
-    // Passing a mutable reference
-    update_word(&mut s1);
-    println!("{}", s1)
+    let s2 = &mut s1;
+    s2.push_str(" World");
+    // Gives error below to save memory issues
+    // println!("{}", s1);
+    println!("{}", s2);
 
 
 }
 
-fn update_word(s: &mut String){
-    s.push_str(" World");
-}
+// fn update_word(s: &mut String){
+//     s.push_str(" World");
+// }
 
 // accept string & send string back to main stack frame
 // fn borrow_variable(mystring: &String) -> &String{
