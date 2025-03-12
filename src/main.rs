@@ -136,9 +136,11 @@ fn update_string() {
     println!("Capacity: {}, Length: {}, Pointer: {:p}", s.capacity(), s.len(), s.as_ptr());
     
     // Append some text to the string
-    s.push_str(" and some additional text");
-    println!("After update: {}", s);
+   for _ in 0..100{
+    s.push_str(" and some additional text \n");
+    // println!("After update: {}", s);
     println!("Capacity: {}, Length: {}, Pointer: {:p}", s.capacity(), s.len(), s.as_ptr());
+   }
 }
 
 
