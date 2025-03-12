@@ -112,13 +112,20 @@ fn main() {
     
     // Ownerships - Clones
 
-    let s1 = String::from("Hello");
-    let s2 = s1.clone();
-    println!("{} S1, {:p}", s1, s1.as_ptr());
-    println!("{} S2, {:p}", s2, s2.as_ptr());
+    // let s1 = String::from("Hello");
+    // let s2 = s1.clone();
+    // println!("{} S1, {:p}", s1, s1.as_ptr());
+    // println!("{} S2, {:p}", s2, s2.as_ptr());
+
+    let real_string = String::from("Hello World");
+    take_ownership(real_string);
+    // println!("{}", real_string) This line will give an error as heap value of real string has been passed to mystring.
 
 
+}
 
+fn take_ownership(mystring: String){
+    println!("{} from mystring", mystring)
 }
 
 // fn stack_fn() {
