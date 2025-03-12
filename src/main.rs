@@ -117,18 +117,22 @@ fn main() {
     // println!("{} S1, {:p}", s1, s1.as_ptr());
     // println!("{} S2, {:p}", s2, s2.as_ptr());
 
-    let real_string = String::from("Hello World");
-    let mystring3 = take_ownership(real_string);
-    // This below line may give an error as heap value of real string has been passed to mystring.
-    println!("{} from mystring3", mystring3);
+    // let real_string = String::from("Hello World");
+    // let mystring3 = take_ownership(real_string);
+    // // This below line may give an error as heap value of real string has been passed to mystring.
+    // println!("{} from mystring3", mystring3);
 
+    let real = String::from("Hello");
+    println!("{} from real", real);
+    let s = &real;
+    println!("{} from s", s);
 
 }
 
-fn take_ownership(mystring: String)-> String{
-    println!("{} from mystring", mystring);
-    return mystring;
-}
+// fn take_ownership(mystring: String)-> String{
+//     println!("{} from mystring", mystring);
+//     return mystring;
+// }
 
 // fn stack_fn() {
 //     // Declare a few integers on the stack
