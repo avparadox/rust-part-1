@@ -2,6 +2,8 @@
 
 This repository contains my practice code for learning Rust programming. It covers various concepts such as structs, variables, loops, conditionals, pattern matching, ownership, references, and more. Each section includes an explanation and example code to reinforce learning.
 
+📄 **Docs File:** [Rust Bootcamp](https://projects.100xdevs.com/tracks/rust-bootcamp/Rust-Bootcamp-1)
+
 ---
 
 ## 📖 Table of Contents
