@@ -1,26 +1,42 @@
+use std::io;
+
 // Structs
 
-struct User {
-    name: String,
-    age: u32,
-    email: String,
-    active: bool
-}
+// struct User {
+//     name: String,
+//     age: u32,
+//     email: String,
+//     active: bool
+// }
 
 fn main() {
-    // println!("Hello, Aditya!");
+    println!("Hello, Aditya!");
+    let mut input1 = String::new();
+    let mut input2 = String::new();
+    
+    println!("Enter the first number:");
+    io::stdin().read_line(&mut input1).expect("Failed to read input");
+    
+    println!("Enter the second number:");
+    io::stdin().read_line(&mut input2).expect("Failed to read input");
+    
+    let num1: f64 = input1.trim().parse().expect("Please enter a valid number");
+    let num2: f64 = input2.trim().parse().expect("Please enter a valid number");
+    
+    let sum = num1 + num2;
+    println!("The sum is: {}", sum);
 
-    let user = User {
-        name: String::from("Aditya"),
-        age: 22,
-        email: String::from("aditya@av.com"),
-        active: true
-    };
+    // let user = User {
+    //     name: String::from("Aditya"),
+    //     age: 22,
+    //     email: String::from("aditya@av.com"),
+    //     active: true
+    // };
 
-    println!("Name: {}", user.name);
-    println!("Email: {}", user.email);
-    println!("Age: {}", user.age);
-    println!("Active Status: {}", user.active);
+    // println!("Name: {}", user.name);
+    // println!("Email: {}", user.email);
+    // println!("Age: {}", user.age);
+    // println!("Active Status: {}", user.active);
 
     // Signed & Unsigned Ints
 
