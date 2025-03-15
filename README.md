@@ -1,4 +1,4 @@
-# Rust Programming Practice 🚀
+# Rust Programming 🚀
 
 This repository contains my practice code for learning Rust programming. It covers various concepts such as structs, variables, loops, conditionals, pattern matching, ownership, references, and more. Each section includes an explanation and example code to reinforce learning.
 
